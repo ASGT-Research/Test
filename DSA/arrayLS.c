@@ -38,6 +38,14 @@ int BinarySearch(int number[],int key){
   return -1;
 }
 
+int ReverseOrder(int number[]){
+  for (int i=0;i<=MAX-1;i++) {
+    printf("%d",number[i]);
+  }
+  printf("\n");
+  for (int j=MAX-1;j>=0;j--) {
+    printf("%d" ,number[j]); }
+}
 int main()
 {   int number[MAX];
     int key ;
@@ -50,7 +58,7 @@ int main()
  while(1){
     int choise;
 
-  printf("\n Enter your choise.\n 1 LinearSearch method \n 2 LargestNumber \n 3 BinarySearch\n press any key for exit");
+  printf("\n Enter your choise.\n 1 LinearSearch method \n 2 LargestNumber \n 3 BinarySearch\n 4 ReverseOrder for array\n press any key for exit");
   scanf("%d",&choise);
  
 
@@ -65,6 +73,10 @@ int main()
     case 3:
     printf(" BinarySearch techniqe find index is : %d\n",BinarySearch( number, key));
     break;
+    case 4:
+      ReverseOrder(number);
+      break;
+
   
     default:
       printf("%\n Invaild Choise");
