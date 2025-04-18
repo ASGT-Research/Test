@@ -11,6 +11,15 @@ int LinearSearch(int number[],int key){
   return -1;
 }
 
+int LargestNumber(int number[]){
+  int largest = 0;
+  for (int i=0;i<= MAX-1;i++) {
+    if (largest < number[i]) {
+      largest = number[i];
+    }
+  }
+  return largest;}
+
 int main()
 {int number[MAX]={2,4,6,8,10,12,14,16,18,20};
   int key ;
@@ -20,5 +29,7 @@ int main()
     printf("Key Not found ");
   }else {printf("key is index :%d",index);
   }
+
+  printf("\n largest Number is :%d\n",LargestNumber(number));
   return 0;
 }
